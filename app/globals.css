@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --mornin-bg: #FAFAF8;
+    --mornin-bg-secondary: #F3F2ED;
+    --mornin-surface: #FFFFFF;
+    --mornin-text: #242424;
+    --mornin-text-muted: #686B64;
+    --mornin-accent: #E9D58D;
+    --mornin-accent-soft: #F4EAC7;
+    --mornin-divider: #EAEAE6;
+    --mornin-success: #7D9B7B;
+    --mornin-error: #C97C72;
+  }
+
+  .dark {
+    --mornin-bg: #141413;
+    --mornin-bg-secondary: #1D1D1A;
+    --mornin-surface: #22221F;
+    --mornin-text: #F3F2EE;
+    --mornin-text-muted: #9A9D96;
+    --mornin-accent: #E9D58D;
+    --mornin-accent-soft: #2E291A;
+    --mornin-divider: #2C2C29;
+    --mornin-success: #8FAE8D;
+    --mornin-error: #D88A80;
+  }
+
+  html {
+    background-color: var(--mornin-bg);
+    color: var(--mornin-text);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--mornin-bg);
+    color: var(--mornin-text);
+    font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overscroll-behavior-y: none;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

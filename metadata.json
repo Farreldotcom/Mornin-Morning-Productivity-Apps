@@ -1,0 +1,8 @@
+{
+  "name": "MORNIN.",
+  "description": "Wake Up. Get Ready. Get Going. A calmer morning companion for wake-up alarms, daily priorities, breakfast inspiration, and essentials.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

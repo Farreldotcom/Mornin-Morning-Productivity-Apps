@@ -1,0 +1,1217 @@
+# MORNIN.
+## COMPLETE PRODUCT REQUIREMENTS DOCUMENT (PRD) & FULL-STACK DEVELOPMENT PROMPT
+
+You are an expert product designer, senior UI/UX designer, software architect, and full-stack React developer.
+
+Your task is to design, develop, and implement a complete, functional, premium-quality web application named **MORNIN.**
+
+This is a complete product development task, not just a landing page, UI mockup, or static prototype.
+
+You must build a real interactive application with working features, functional navigation, persistent data, responsive layouts, and a consistent visual identity.
+
+Read and follow all requirements carefully.
+
+==================================================
+# PART 1 — PRODUCT OVERVIEW
+==================================================
+
+## 1.1 Product Identity
+
+Product Name: MORNIN.
+
+Tagline: Wake Up. Get Ready. Get Going.
+
+Alternative Brand Statement: A calmer way to start your day.
+
+Product Category: Morning Productivity & Lifestyle Companion.
+
+Platform: Responsive Web Application, optimized for mobile devices.
+
+Target Users:
+- University students.
+- High school students.
+- Young professionals.
+- Office workers.
+- Individuals with busy daily schedules.
+- People who want to improve their morning routines.
+
+## 1.2 Product Vision
+
+MORNIN is a personal morning companion designed to make everyday mornings easier, more organized, and more enjoyable.
+
+It combines five essential morning activities into one application:
+
+1. Waking up with an interactive alarm.
+2. Reviewing and managing today's activities.
+3. Discovering breakfast recommendations.
+4. Checking essential belongings before leaving home.
+5. Tracking morning readiness and daily progress.
+
+MORNIN should guide users through their morning without overwhelming them with too much information.
+
+The product should feel like a personal lifestyle assistant rather than a complicated productivity management system.
+
+## 1.3 Core Value Proposition
+
+"Everything you need to start your day, in one calm and simple place."
+
+The application must prioritize simplicity, convenience, and clarity.
+
+Users should be able to understand what they need to do immediately after opening the application.
+
+==================================================
+# PART 2 — DESIGN PHILOSOPHY & BRAND IDENTITY
+==================================================
+
+THIS SECTION IS EXTREMELY IMPORTANT.
+
+The overall visual direction must be inspired by Apple's design philosophy and native iOS applications.
+
+Reference the visual simplicity and interaction patterns of:
+- Apple Clock.
+- Apple Reminders.
+- Apple Weather.
+- Apple Health.
+- Apple Calendar.
+
+Do not directly copy Apple's branding or interface. Develop an original MORNIN identity while following similar design principles.
+
+## 2.1 Design Philosophy
+
+The main principle is:
+
+LESS UI. MORE CLARITY.
+
+The application must be:
+- Minimalist.
+- Elegant.
+- Premium.
+- Calm.
+- Intuitive.
+- Modern.
+- Friendly.
+- Effortless to use.
+
+Avoid conventional productivity dashboards that contain too many cards, buttons, widgets, graphs, and decorative elements.
+
+Do not fill every empty space with UI components.
+
+Whitespace is an important part of the design.
+
+## 2.2 Color Palette
+
+Use a restrained and sophisticated palette.
+
+Primary background:
+#FAFAF8
+
+Secondary background:
+#F3F2ED
+
+White surface:
+#FFFFFF
+
+Primary text:
+#242424
+
+Secondary text:
+#92958E
+
+Primary accent:
+#E9D58D
+
+Soft accent:
+#F4EAC7
+
+Divider:
+#EAEAE6
+
+Success:
+#7D9B7B
+
+Error:
+#C97C72
+
+Use off-white and white as the dominant colors.
+
+Use soft yellow/gold only for important highlights, active elements, and selected states.
+
+Avoid excessive colors, strong gradients, and saturated backgrounds.
+
+## 2.3 Typography
+
+Use Manrope as the primary typeface, or a similar modern sans-serif font.
+
+Typography should resemble the clean and elegant feeling of SF Pro Display.
+
+Typography hierarchy:
+
+- Large display typography for the clock.
+- Medium-weight typography for page titles.
+- Regular typography for descriptions.
+- Small muted typography for metadata.
+- Semibold typography for important information.
+
+Avoid excessive bold text.
+
+## 2.4 Components and Layout
+
+Use:
+- Rounded corners between 14px and 20px.
+- Thin separators.
+- Minimal borders.
+- Very subtle shadows.
+- Simple iOS-inspired toggles.
+- Minimal circular checkboxes.
+- Clean line icons.
+- Consistent spacing.
+- Smooth transitions.
+
+Use Lucide React icons.
+
+Do not use large decorative icons or unnecessary illustrations.
+
+## 2.5 Button Philosophy
+
+Buttons must be minimal.
+
+Each screen should have one primary action at most.
+
+Use simple text buttons, understated icon buttons, and native-looking controls.
+
+Do not place multiple action buttons inside every card.
+
+Use small floating or top-right add actions only when necessary.
+
+Avoid oversized colorful buttons.
+
+## 2.6 Responsive Design
+
+Prioritize the mobile experience.
+
+The application should feel natural on an iPhone-sized screen.
+
+Use:
+- Mobile safe-area spacing.
+- Comfortable touch targets.
+- Responsive typography.
+- Fixed bottom navigation.
+- Clean vertical scrolling.
+- Minimal horizontal scrolling.
+
+On desktop, use a compact navigation sidebar or top navigation while maintaining the same visual identity.
+
+==================================================
+# PART 3 — APPLICATION ARCHITECTURE
+==================================================
+
+Build the following main pages:
+
+1. Home.
+2. Alarm.
+3. My Day.
+4. Breakfast.
+5. Checklist.
+6. Settings.
+
+The five main sections should be accessible through a persistent bottom navigation bar on mobile.
+
+Navigation:
+
+- Home.
+- Alarm.
+- My Day.
+- Breakfast.
+- Checklist.
+
+Settings should be accessible through a small profile or settings icon in the header.
+
+Use React Router or an equivalent clean navigation solution.
+
+Navigation must work correctly.
+
+The active navigation item should have a subtle visual indicator.
+
+Do not create a separate dashboard for every feature.
+
+==================================================
+# PART 4 — HOME DASHBOARD
+==================================================
+
+The Home page is the central experience of MORNIN.
+
+Its purpose is to give users a quick overview of their morning and what they should do next.
+
+The screen should feel spacious and uncluttered.
+
+## 4.1 Header
+
+Display:
+- MORNIN. wordmark.
+- Personalized greeting.
+- Current date.
+- Small profile or settings icon.
+
+Greeting examples:
+
+"Good morning, Farrel."
+"Ready for a fresh start?"
+"Let's make today count."
+
+Use the user's saved name.
+
+The greeting should change based on the local time:
+
+Morning: Good morning.
+Afternoon: Good afternoon.
+Evening: Good evening.
+
+## 4.2 Digital Clock
+
+Display a large digital clock as the main visual centerpiece.
+
+Requirements:
+- Real-time clock.
+- 12-hour or 24-hour format.
+- Follow the user's local timezone.
+- Update automatically every second.
+- Elegant typography.
+- Minimal date display.
+
+The clock should be visually dominant without making the interface crowded.
+
+## 4.3 Weather Summary
+
+Include a compact weather summary when weather data is available.
+
+Display:
+- Current temperature.
+- Weather condition.
+- Small weather icon.
+- Optional high and low temperatures.
+
+Use a clean, understated layout.
+
+Do not invent real weather information.
+
+If no weather API is configured, show a graceful unavailable state or omit the widget.
+
+Prepare the architecture for future weather API integration.
+
+## 4.4 Today's Overview
+
+Show a concise summary of:
+
+- Next alarm.
+- Today's task completion.
+- Breakfast status.
+- Checklist completion.
+- Planned departure time.
+
+Do not display five large cards.
+
+Instead, use compact rows, subtle separators, and a clean vertical layout.
+
+Each summary row should be clickable and open its relevant page.
+
+## 4.5 Time to Leave
+
+This should be one of MORNIN's signature features.
+
+Allow users to configure their planned departure time.
+
+Display a dynamic countdown.
+
+Example:
+
+"Time to leave"
+
+08:30 AM
+
+"You have 25 minutes left."
+
+The countdown should update automatically.
+
+If the planned departure time has passed, display an appropriate message.
+
+## 4.6 Morning Progress
+
+Display a simple horizontal progress bar.
+
+Example:
+
+"Your morning is 60% ready."
+
+Calculate progress from actual user activities.
+
+Suggested activities:
+- Alarm dismissed.
+- Daily tasks reviewed.
+- Breakfast marked complete.
+- Essential items checked.
+
+Do not use fake or hardcoded percentages.
+
+## 4.7 Daily Motivation
+
+Display one short motivational sentence.
+
+Examples:
+- "Small steps make great mornings."
+- "A fresh start begins with you."
+- "Make today count."
+- "One thing at a time."
+
+Use a small, subtle text section.
+
+==================================================
+# PART 5 — ALARM & WAKE-UP CHALLENGE
+==================================================
+
+The Alarm feature is one of the core functions of MORNIN.
+
+Its purpose is to encourage users to wake up actively instead of dismissing an alarm automatically.
+
+## 5.1 Alarm Management
+
+Allow users to:
+
+- Create alarms.
+- Edit alarms.
+- Delete alarms.
+- Enable or disable alarms.
+- Set alarm times.
+- Choose recurring days.
+- Add alarm labels.
+- Choose a wake-up challenge.
+- Configure snooze duration.
+
+Alarm interface:
+
+Use an iOS Clock-inspired layout.
+
+Each alarm should display:
+- Large time.
+- Label.
+- Repeat schedule.
+- Minimal toggle switch.
+
+Use a simple add alarm button.
+
+Avoid unnecessary alarm cards.
+
+## 5.2 Alarm Configuration
+
+When creating an alarm, provide:
+
+- Time picker.
+- AM/PM or 24-hour format.
+- Repeat days.
+- Alarm label.
+- Challenge type.
+- Challenge difficulty.
+- Snooze duration.
+
+Use a clean modal or dedicated configuration sheet.
+
+## 5.3 Wake-Up Challenges
+
+Provide three mini games.
+
+A. MATH CHALLENGE
+
+The user must solve a basic arithmetic problem.
+
+Examples:
+- 17 + 26.
+- 45 - 18.
+- 8 × 7.
+
+Difficulty:
+- Easy.
+- Medium.
+- Hard.
+
+B. MEMORY MATCH
+
+Display a small grid of hidden cards.
+
+The user must find matching pairs.
+
+Requirements:
+- Flip card interaction.
+- Match detection.
+- Simple completion state.
+- Minimal game interface.
+
+C. PATTERN RECOGNITION
+
+Display a sequence of numbers or symbols.
+
+The user must identify the missing element.
+
+Example:
+
+2, 4, 6, ?, 10.
+
+The user enters the correct answer to complete the challenge.
+
+## 5.4 Alarm Experience
+
+When the alarm reaches its configured time:
+
+1. Show an alarm screen.
+2. Display the alarm label and time.
+3. Start an alarm sound where supported.
+4. Present the selected challenge.
+5. Require successful completion before dismissal.
+6. Stop the sound after successful completion.
+7. Update the morning progress.
+
+Show a message:
+
+"Good morning! You're officially up."
+
+## 5.5 Snooze
+
+Allow users to snooze the alarm.
+
+Provide configurable snooze durations:
+- 5 minutes.
+- 10 minutes.
+- 15 minutes.
+
+Use a simple snooze action.
+
+## 5.6 Technical Limitations
+
+IMPORTANT:
+
+This is initially a browser-based web application.
+
+Implement alarm scheduling using browser-compatible mechanisms.
+
+Use browser notifications where supported and permission is granted.
+
+Do not claim that a web alarm will reliably sound while the browser is completely closed or the device is sleeping.
+
+Provide an in-app alarm simulation/testing mode.
+
+Keep alarm configuration and challenge logic modular so native Android/iOS alarm functionality can be integrated in the future.
+
+==================================================
+# PART 6 — MY DAY: DAILY TASK MANAGEMENT
+==================================================
+
+My Day is a lightweight daily planning feature.
+
+It should feel similar to Apple Reminders.
+
+The goal is to help users understand what needs to be accomplished today.
+
+## 6.1 Main Interface
+
+Display:
+- Today's date.
+- Page title: My Day.
+- Number of completed tasks.
+- Number of remaining tasks.
+- Simple completion progress.
+- Today's task list.
+
+Avoid complicated dashboard layouts.
+
+## 6.2 Task Management
+
+Allow users to:
+
+- Add tasks.
+- Edit tasks.
+- Delete tasks.
+- Mark tasks complete.
+- Set due times.
+- Set priority.
+- Select categories.
+- Add optional descriptions.
+
+## 6.3 Task Information
+
+Each task should contain:
+
+- Unique ID.
+- Title.
+- Description.
+- Date.
+- Due time.
+- Category.
+- Priority.
+- Completion status.
+- Creation timestamp.
+
+## 6.4 Categories
+
+Provide:
+- Study.
+- Work.
+- Personal.
+- Health.
+- Other.
+
+## 6.5 Priorities
+
+Provide:
+- High.
+- Medium.
+- Low.
+
+Use subtle visual indicators instead of colorful labels.
+
+## 6.6 Task List
+
+Display tasks in a clean vertical list.
+
+Each row should contain:
+- Circular checkbox.
+- Task title.
+- Optional due time.
+- Subtle priority indicator.
+
+Use thin horizontal dividers.
+
+Do not place every task inside a separate card.
+
+## 6.7 Task Creation
+
+Use a clean bottom sheet or modal.
+
+Required:
+- Task title.
+
+Optional:
+- Description.
+- Category.
+- Priority.
+- Date.
+- Time.
+
+Use a simple save action.
+
+## 6.8 Task Filtering
+
+Provide minimal filters:
+- All.
+- Pending.
+- Completed.
+
+Keep filtering controls understated.
+
+## 6.9 Task Progress
+
+Calculate completion percentage dynamically.
+
+Example:
+
+4 of 7 completed.
+
+Update progress immediately after the user checks or unchecks a task.
+
+==================================================
+# PART 7 — BREAKFAST RECOMMENDATIONS
+==================================================
+
+Breakfast is a lifestyle feature designed to help users decide what to eat in the morning.
+
+The interface should feel like a premium food editorial experience.
+
+Avoid conventional food marketplace layouts.
+
+## 7.1 Breakfast Homepage
+
+Display one featured breakfast recommendation at a time.
+
+The layout should contain:
+
+- Large food photograph.
+- Food name.
+- Short description.
+- Estimated preparation time.
+- Difficulty level.
+- Main ingredients.
+- One primary action.
+
+Use high-quality food photography.
+
+## 7.2 Breakfast Database
+
+Include at least these initial recommendations:
+
+1. Avocado Toast.
+2. Scrambled Eggs & Toast.
+3. Banana Pancakes.
+4. Greek Yogurt Bowl.
+5. Overnight Oats.
+6. Fruit Smoothie.
+7. Indonesian Fried Rice.
+8. Chicken Porridge.
+9. Egg Sandwich.
+10. Peanut Butter Toast.
+11. Vegetable Omelette.
+12. Fresh Fruit Bowl.
+
+Each breakfast entry should contain:
+
+- ID.
+- Name.
+- Description.
+- Image URL.
+- Preparation time.
+- Difficulty.
+- Ingredients.
+- Category.
+
+Use reliable image sources.
+
+Do not leave broken image placeholders.
+
+## 7.3 Shuffle Recommendation
+
+Include a small "Surprise me" action.
+
+When selected, display a different breakfast recommendation.
+
+Avoid repeating the currently displayed recommendation unless all alternatives have been exhausted.
+
+## 7.4 Preparation Time Filters
+
+Provide:
+- Under 5 minutes.
+- 5–10 minutes.
+- 10–20 minutes.
+
+Keep the filters simple.
+
+## 7.5 Breakfast Completion
+
+Include one primary action:
+
+"I've had breakfast."
+
+After selection:
+- Mark breakfast as completed.
+- Update morning progress.
+- Show a subtle success message.
+- Save the completion status.
+
+==================================================
+# PART 8 — DON'T FORGET CHECKLIST
+==================================================
+
+This feature ensures users do not leave essential belongings behind.
+
+## 8.1 Main Interface
+
+Page title:
+
+"Don't Forget"
+
+Subtitle:
+
+"Everything you need before heading out."
+
+Display:
+- Checklist progress.
+- Number of checked items.
+- Remaining items.
+- Essential item list.
+
+Use a clean checklist interface inspired by iOS Reminders.
+
+## 8.2 Default Items
+
+Include:
+
+ESSENTIALS:
+- Smartphone.
+- Wallet.
+- House Keys.
+- ID Card.
+
+ELECTRONICS:
+- Laptop.
+- Charger.
+- Earphones.
+- Power Bank.
+
+WORK & STUDY:
+- Notebook.
+- Pen.
+- Documents.
+
+PERSONAL:
+- Water Bottle.
+- Umbrella.
+- Jacket.
+
+## 8.3 Checklist Functionality
+
+Allow users to:
+
+- Check items.
+- Uncheck items.
+- Add custom items.
+- Edit item names.
+- Delete items.
+- Select categories.
+- Reset daily checklist completion.
+
+## 8.4 Checklist Persistence
+
+Separate saved item templates from daily completion status.
+
+The user should be able to save frequently used items.
+
+Completion status should be resettable for a new day.
+
+Custom items must remain saved even after daily completion is reset.
+
+## 8.5 Completion State
+
+When all items are checked, display:
+
+"You're all set!"
+
+"Have a great day."
+
+Use a subtle success animation.
+
+==================================================
+# PART 9 — SETTINGS & PERSONALIZATION
+==================================================
+
+Create a simple Settings page.
+
+## 9.1 Profile
+
+Allow users to configure:
+- Display name.
+- Email (optional).
+- Profile picture (optional).
+
+## 9.2 Morning Preferences
+
+Allow users to configure:
+- Preferred wake-up time.
+- Planned departure time.
+- Preferred time format.
+- Default snooze duration.
+
+## 9.3 Notifications
+
+Include:
+- Notification permission status.
+- Enable or disable reminders.
+- Reminder preferences.
+
+Only display notification features that are technically supported.
+
+## 9.4 Appearance
+
+Provide:
+- Light mode.
+- Dark mode.
+
+Light mode should be the default.
+
+Dark mode should preserve the same minimalist visual identity.
+
+## 9.5 Data Management
+
+Include:
+- Reset today's progress.
+- Clear saved application data.
+- Restore default checklist templates.
+
+Use confirmation dialogs for destructive actions.
+
+==================================================
+# PART 10 — MORNING EXPERIENCE & USER JOURNEY
+==================================================
+
+The complete user journey should be organized around a typical morning.
+
+STAGE 1 — NIGHT BEFORE
+
+The user:
+- Configures the alarm.
+- Reviews tomorrow's agenda.
+- Sets the planned departure time.
+- Checks tomorrow's essential belongings.
+
+STAGE 2 — WAKE UP
+
+The alarm activates at the configured time.
+
+The user completes the selected wake-up challenge.
+
+STAGE 3 — PLAN THE DAY
+
+The user opens MORNIN.
+
+The Home screen displays:
+- Current time.
+- Today's overview.
+- Remaining tasks.
+- Time to leave.
+
+The user reviews My Day.
+
+STAGE 4 — BREAKFAST
+
+The user views a breakfast recommendation.
+
+The user marks breakfast as completed after eating.
+
+STAGE 5 — GET READY
+
+The user checks their belongings.
+
+The checklist updates dynamically.
+
+STAGE 6 — READY TO GO
+
+MORNIN displays:
+
+"You're all set."
+
+"Have a wonderful day!"
+
+The morning session is completed.
+
+==================================================
+# PART 11 — DATA ARCHITECTURE
+==================================================
+
+Use TypeScript interfaces for all major data structures.
+
+Suggested models:
+
+USER:
+- id
+- name
+- email
+- preferredWakeUpTime
+- departureTime
+- timeFormat
+
+ALARM:
+- id
+- time
+- label
+- repeatDays
+- enabled
+- challengeType
+- challengeDifficulty
+- snoozeDuration
+
+TASK:
+- id
+- title
+- description
+- date
+- dueTime
+- category
+- priority
+- completed
+- createdAt
+
+BREAKFAST:
+- id
+- name
+- description
+- imageUrl
+- preparationTime
+- difficulty
+- ingredients
+
+CHECKLIST ITEM:
+- id
+- name
+- category
+- isDefault
+- createdAt
+
+DAILY PROGRESS:
+- date
+- alarmDismissed
+- breakfastCompleted
+- completedTaskIds
+- checkedChecklistItemIds
+- morningProgress
+
+Use Local Storage for initial persistence.
+
+Separate application logic into reusable services and hooks.
+
+Implement safe data parsing and default values.
+
+Handle missing or corrupted stored data gracefully.
+
+Persist data after user interactions.
+
+Ensure data remains available after browser refresh.
+
+Design the architecture so Firebase Authentication and Cloud Firestore can be integrated later without rewriting the entire application.
+
+==================================================
+# PART 12 — TECHNICAL STACK
+==================================================
+
+Use:
+
+Frontend:
+- React.
+- TypeScript.
+- Vite.
+
+Styling:
+- Tailwind CSS.
+
+Icons:
+- Lucide React.
+
+Routing:
+- React Router.
+
+State Management:
+- React Context or lightweight state management where appropriate.
+
+Persistence:
+- Browser Local Storage.
+
+Browser Features:
+- Notifications API.
+- Web Audio API where supported.
+- Browser visibility and scheduling mechanisms.
+
+Keep the project structure clean and modular.
+
+Suggested folder structure:
+
+src/
+  components/
+    layout/
+    common/
+    home/
+    alarm/
+    tasks/
+    breakfast/
+    checklist/
+
+  pages/
+    Home.tsx
+    Alarm.tsx
+    MyDay.tsx
+    Breakfast.tsx
+    Checklist.tsx
+    Settings.tsx
+
+  hooks/
+    useClock.ts
+    useLocalStorage.ts
+    useMorningProgress.ts
+
+  services/
+    alarmService.ts
+    taskService.ts
+    breakfastService.ts
+    checklistService.ts
+    storageService.ts
+
+  types/
+    index.ts
+
+  utils/
+    dateUtils.ts
+    timeUtils.ts
+    progressUtils.ts
+
+  App.tsx
+  main.tsx
+
+You may modify the folder structure if needed, but preserve a clear separation between components, business logic, data, and utilities.
+
+==================================================
+# PART 13 — FUNCTIONAL REQUIREMENTS
+==================================================
+
+The application must be genuinely interactive.
+
+All primary interactions must work.
+
+Required functionality:
+
+- Real-time digital clock.
+- Dynamic personalized greetings.
+- Working navigation.
+- Alarm creation and editing.
+- Alarm enable/disable.
+- Wake-up mini games.
+- Alarm simulation mode.
+- Snooze logic.
+- Task creation.
+- Task editing.
+- Task deletion.
+- Task completion.
+- Dynamic task progress.
+- Breakfast shuffle.
+- Breakfast completion.
+- Checklist creation.
+- Checklist editing.
+- Checklist deletion.
+- Checklist completion.
+- Checklist reset.
+- Dynamic morning progress.
+- Time-to-leave countdown.
+- Local Storage persistence.
+- Responsive navigation.
+- Settings persistence.
+- Dark mode.
+
+Avoid decorative controls that do not work.
+
+Do not use hardcoded progress values.
+
+All progress indicators must reflect actual stored application data.
+
+==================================================
+# PART 14 — SAMPLE DATA & INITIAL EXPERIENCE
+==================================================
+
+Provide realistic sample data on the first application launch.
+
+Example user:
+Name: Farrel.
+
+Example alarm:
+06:00 AM — Morning Routine.
+
+Example tasks:
+- Review today's schedule.
+- Attend university class.
+- Complete project assignment.
+- Check emails.
+- Exercise.
+
+Example departure time:
+07:30 AM.
+
+Example checklist:
+- Smartphone.
+- Wallet.
+- House Keys.
+- Laptop.
+- Charger.
+
+Do not make the application look empty on initial launch.
+
+However, allow the user to edit and remove all sample information.
+
+Do not repeatedly recreate sample data after the user deletes it.
+
+==================================================
+# PART 15 — QUALITY ASSURANCE
+==================================================
+
+Before completing development, verify:
+
+1. Every page loads correctly.
+2. All navigation works.
+3. No broken images.
+4. No dead buttons.
+5. All forms validate correctly.
+6. Local Storage works.
+7. Data persists after refresh.
+8. Task progress updates correctly.
+9. Checklist progress updates correctly.
+10. Alarm challenge can be completed.
+11. Alarm simulation works.
+12. Breakfast shuffle works.
+13. Time-to-leave countdown updates correctly.
+14. Responsive layouts work.
+15. No major console errors.
+16. No TypeScript errors.
+17. No unnecessary UI clutter.
+
+Pay special attention to mobile responsiveness and visual consistency.
+
+==================================================
+# PART 16 — DEVELOPMENT EXECUTION
+==================================================
+
+Build the entire application directly in the Google AI Studio development environment.
+
+Do not just provide code examples or explain how to build it.
+
+Actually create and implement the files.
+
+Follow this order:
+
+PHASE 1:
+- Initialize project.
+- Configure dependencies.
+- Establish design system.
+- Build layout and navigation.
+
+PHASE 2:
+- Build Home.
+- Build Alarm.
+- Build My Day.
+- Build Breakfast.
+- Build Checklist.
+- Build Settings.
+
+PHASE 3:
+- Implement all business logic.
+- Connect all components.
+- Implement Local Storage.
+- Implement dynamic progress.
+
+PHASE 4:
+- Optimize responsiveness.
+- Refine UI details.
+- Add animations.
+- Test functionality.
+- Fix errors.
+
+You must implement all major pages, not stop after the homepage.
+
+If the full implementation requires multiple steps, continue iteratively until the main application is complete.
+
+Do not replace existing working functionality with mock data or static visual elements.
+
+==================================================
+# FINAL PRODUCT EXPECTATION
+==================================================
+
+The final application should feel like a real premium lifestyle product.
+
+MORNIN should not look like a generic AI-generated productivity dashboard.
+
+It should feel closer to a carefully designed native iOS application.
+
+Its interface should be calm, clean, elegant, and effortless.
+
+The application should have a clear purpose:
+
+Help users wake up, understand their priorities, enjoy breakfast, remember their belongings, and leave home prepared.
+
+The product must combine functional usefulness with beautiful simplicity.
+
+Remember:
+
+MORNIN is not about doing more things.
+
+It is about starting the day right.
+
+MORNIN.
+Wake Up. Get Ready. Get Going.
